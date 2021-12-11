@@ -11,10 +11,6 @@ PsGitScript will update aliases on every powershell launch, but never deletes an
 
 ## How to install
 
-Installation using package manager (probably winget) will be supported and recommended in the future.
-
-Right now you can download the script (with container folder) and put it in your PATH.
-
 ### Prerequisites
 
 - Powershell (tested on Powershell 7)
@@ -25,14 +21,16 @@ Right now you can download the script (with container folder) and put it in your
 
 ### Installation steps
 
-Download the module, and put it in a folder:
+Open powershell 7 and execute the following command:
 
-`C:\PsGitScript\PsGitScript.psm1`
+```powershell
+Install-Module -Name PsGitScript
+```
 
 Edit the `Profile.ps1` file and add the following line:
 
 ```powershell
-Import-Module "C:\PsGitScript"
+Import-Module PsGitScript
 ```
 
 ## Creating your own git script
