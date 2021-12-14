@@ -45,7 +45,7 @@ Write-Host "Hello, World!"
 
 > You can check `$Path` variable in powershell with the following command: `$Env:Path -Split ';'`
 
-You just created a new script what needs to be registered in .gitconfig as an alias.
+You just created a new script what needs to be registered in `.gitconfig` file as an alias.
 You can restart your pwsh session or execute the `Invoke-PsGitScriptInit` command to update the aliases.
 
 Now you can call your script:
