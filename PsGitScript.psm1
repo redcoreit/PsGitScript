@@ -31,7 +31,7 @@ function Invoke-PsGitScriptInit {
 
     foreach ($item in $scripts) {
         $path = $item.Source
-        $command = "\`"$path\`""
+        $command = $path.Replace('\', '/')
         $alias = "! pwsh -NoProfile -ExecutionPolicy bypass -WorkingDirectory `$PWD -c $command"
         $name = Split-Path $path -Leaf | Invoke-Regex -Regex "^git-(.*).ps1$" -Group 1
 
